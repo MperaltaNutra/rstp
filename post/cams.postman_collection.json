@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "c7c88cfe-1279-4ab3-929b-5b65399878f6",
+		"name": "cams",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "stop",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5051/stop/:wsPorts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5051",
+					"path": [
+						"stop",
+						":wsPorts"
+					],
+					"variable": [
+						{
+							"key": "wsPorts",
+							"value": "9991"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "start",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"streamUrl\":\"rtsp://admin:NutrAdm_20.20@190.54.179.123:8006/cam/realmonitor?channel=1>&subtype=1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5051/start/:wsPorts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5051",
+					"path": [
+						"start",
+						":wsPorts"
+					],
+					"variable": [
+						{
+							"key": "wsPorts",
+							"value": "9991"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "puertos activos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"streamUrl\":\"rtsp://admin:NutrAdm_20.20@190.54.179.123:8006/cam/realmonitor?channel=1>&subtype=1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5051/wsPorts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5051",
+					"path": [
+						"wsPorts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

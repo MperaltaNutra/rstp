@@ -1,0 +1,31 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Streaming IP Camera Nodejs</title>
+	</head>
+	<body>
+		<div>
+			<h1>hola</h1>
+
+			<div id="conten-canvas">
+				<canvas id="chanel1" width="auto" height="auto"></canvas>
+			</div>
+
+			<input
+				id="streamUrl"
+				type="text"
+				value="rtsp://admin:NutrAdm_20.20@190.54.179.123:8006/cam/realmonitor?channel=1>&subtype=1"
+			/>
+			<input id="wsPorts" type="number" min="4" max="4" value="9999" />
+
+			<button id="start">start</button>
+			<button id="stop">stop</button>
+
+			<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+			<script src="./jsmpeg.min.js"></script>
+			<script src="./controll.js"></script>
+		</div>
+	</body>
+</html>
